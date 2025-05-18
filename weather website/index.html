@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherSphere</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>WeatherSphere</h1>
+            <div class="search-container">
+                <input type="text" id="location-input" placeholder="Enter city name...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+                <button id="current-location-btn" title="Use current location"><i class="fas fa-location-arrow"></i></button>
+            </div>
+        </header>
+
+        <main>
+            <div class="current-weather">
+                <div class="weather-info">
+                    <h2 id="current-city">Loading...</h2>
+                    <div class="temp-container">
+                        <span id="current-temp">--</span>
+                        <span class="temp-unit">°C</span>
+                    </div>
+                    <div id="current-condition">--</div>
+                </div>
+                <div class="weather-icon">
+                    <img id="weather-img" src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather icon">
+                </div>
+                <div class="weather-details">
+                    <div class="detail">
+                        <i class="fas fa-wind"></i>
+                        <span id="wind-speed">-- km/h</span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-tint"></i>
+                        <span id="humidity">--%</span>
+                    </div>
+                    <div class="detail">
+                        <i class="fas fa-sun"></i>
+                        <span id="uv-index">--</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="forecast">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-container" id="forecast-container">
+                    <!-- Forecast items will be added by JavaScript -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Data provided by <a href="https://www.weatherapi.com/" target="_blank">WeatherAPI.com</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
